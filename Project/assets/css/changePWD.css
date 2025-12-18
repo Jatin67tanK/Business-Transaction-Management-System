@@ -1,0 +1,122 @@
+ * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: "Segoe UI", sans-serif;
+ }
+
+ body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         height: 100vh;
+         background: linear-gradient(135deg, #0f172a, #1e293b);
+         color: #fff;
+ }
+
+ .container {
+         background: #1e293b;
+         padding: 30px;
+         border-radius: 15px;
+         width: 100%;
+         max-width: 400px;
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+ }
+
+ h2 {
+         text-align: center;
+         margin-bottom: 20px;
+         color: #38bdf8;
+ }
+
+ .form-group {
+         margin-bottom: 15px;
+ }
+
+ label {
+         display: block;
+         margin-bottom: 5px;
+         font-weight: bold;
+         color: #cbd5e1;
+ }
+
+ input[type="password"] {
+         width: 100%;
+         padding: 10px;
+         border: none;
+         border-radius: 8px;
+         outline: none;
+         background: #334155;
+         color: #fff;
+ }
+
+ input[type="password"]:focus {
+         border: 2px solid #38bdf8;
+ }
+
+ .btn-section {
+         display: flex;
+         gap: 10px;
+         margin-top: 10px;
+ }
+
+ .btn {
+         flex: 1;
+         padding: 12px;
+         background: #38bdf8;
+         border: none;
+         border-radius: 8px;
+         color: #000;
+         font-weight: bold;
+         cursor: pointer;
+         transition: 0.3s;
+         text-align: center;
+ }
+
+ .btn:hover {
+         background: #0ea5e9;
+ }
+
+ .btn.back {
+         background: #64748b;
+         color: #fff;
+         text-decoration: none;
+         display: inline-block;
+         top: 15px;
+         left: 5%;
+         position: absolute;
+ }
+
+ .btn.back:hover {
+         background: #475569;
+ }
+
+ .success {
+         background: #22c55e;
+         padding: 10px;
+         margin-bottom: 15px;
+         border-radius: 8px;
+         text-align: center;
+ }
+
+ .error {
+         background: #ef4444;
+         padding: 10px;
+         margin-bottom: 15px;
+         border-radius: 8px;
+ }
+
+ /* Input error messages */
+ .input-error {
+         color: #f87171;
+         font-size: 0.85em;
+         margin-top: 5px;
+ }
+
+ @media(max-width:480px) {
+         .container {
+                 padding: 20px;
+                 max-width: 90%;
+         }
+ }

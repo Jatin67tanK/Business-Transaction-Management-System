@@ -1,0 +1,217 @@
+/* ==========================
+   General Body
+   ========================== */
+body {
+  background: #c8deff no-repeat fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-size: 1.6rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ==========================
+   Container
+   ========================== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   Logo
+   ========================== */
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2564eb;
+  margin-bottom: 25px;
+  text-align: center;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+/* ==========================
+   Login Card
+   ========================== */
+.login-card {
+  height: 70vh;
+  width: 820px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 .5rem .5rem 0;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-card .img-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.login-card .img-section img {
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.login-form-section {
+  flex: 1;
+  width: 50%;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ==========================
+   Title
+   ========================== */
+.login-title {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* ==========================
+   Inputs
+   ========================== */
+.form-control {
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  border-color: #007bff;
+}
+
+#loginForm .form-control::placeholder {
+  color: #aaa;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* ==========================
+   Button
+   ========================== */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* ==========================
+   Error Message
+   ========================== */
+.error-msg {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+/* ==========================
+   Links
+   ========================== */
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.95rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+   ✅ Mobile Responsiveness
+   ========================== */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .login-card .img-section {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .login-card .img-section img {
+    height: 200px;
+    border-radius: 0.8rem;
+    object-fit: cover;
+  }
+
+  .login-form-section {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+  }
+
+  .login-title {
+    font-size: 1.3rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+/* ==========================
+   ✅ Tablet Responsiveness
+   ========================== */
+@media (min-width: 769px) and (max-width: 992px) {
+  .login-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ==========================
+   ✅ Large Screens
+   ========================== */
+@media (min-width: 1200px) {
+  .login-card {
+    max-width: 1000px;
+  }
+}

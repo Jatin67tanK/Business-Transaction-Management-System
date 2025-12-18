@@ -1,0 +1,247 @@
+/* 🌟 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 🌟 Layout */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar.hidden~.dashboard {
+    margin-left: 60px;
+}
+
+
+/* Sidebar (already included via sidebar.php, so keep minimal here) */
+
+
+
+
+/* 🌟 Dashboard */
+.dashboard {
+  margin-left: 220px;
+  flex: 1;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.head-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.hamburger {
+  /* display: none; */
+  z-index: 10001;
+  position: relative;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-section button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* 🌟 Form Container */
+.form-container {
+  padding: 0 25px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.form-container h2 {
+  /* margin-bottom: 15px; */
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Category Manager */
+.category-container {
+  margin-top: 15px;
+  width: 800px;
+  max-width: 100% ;
+}
+
+.category-container h2 {
+  font-size: 1.2rem;
+  /* margin-bottom: 10px; */
+  color: #444;
+}
+
+/* Add Category Form */
+.add-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.add-category h2{
+  width: 30%;
+}
+.add-category form {
+  width: 70%;
+}
+.add-category input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+.add-category input:focus {
+  border-color: #0f172a;
+}
+
+.add-category .btn.add {
+  background: #0f172a;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-category .btn.add:hover {
+  background: #1e293b;
+}
+
+/* Category Items */
+
+.category-item form{
+  width: 100%;
+  width: auto;
+}
+.category-item {
+  display: flex !important;
+ width: 100%;
+  /* grid-template-columns: 70px 1fr 1.5fr 100px 60px; */
+  align-items: center;
+  justify-content: space-evenly;
+  /* background: #fff; */
+  padding: 12px;
+  font-size: 1rem !important;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.category-item input {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #374151;
+  pointer-events: none;
+}
+
+.category-item .btn.delete {
+  background: #e11d48;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-item .btn.delete:hover {
+  background: #be123c;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 992px) {
+  
+  .main-container {
+    flex-direction: column;
+  }
+
+  
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .dashboard {
+        margin-left: 0;
+    }
+
+    .sidebar.hidden {
+        width: 0;
+    }
+
+        .sidebar.hidden~.dashboard {
+            margin-left: 00px;
+        }
+
+  
+}
+
+@media (max-width: 576px) {
+  .add-category {
+    flex-direction: column;
+  }
+.sidebar.hidden~.dashboard {
+        margin-left: 0px;
+    }
+  /* .dashboard {
+        margin-left: 00px;
+    } */
+
+  .category-item {
+    flex-direction: column;
+    width: 100%;
+    /* align-items: flex-start; */
+  }
+
+  .category-item input {
+    width: 100%;
+  }
+  .category-item .delete{
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+}

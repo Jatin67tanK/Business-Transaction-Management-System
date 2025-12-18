@@ -1,0 +1,21 @@
+.popup-notification {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 16px 32px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 400px;
+  opacity: 1;
+  transition: opacity 0.5s, top 0.5s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.popup-notification.success { background:rgb(82, 253, 145); }
+.popup-notification.info { background: #2563eb; }
+.popup-notification.error { background: #e11d48; }
+.popup-notification.hide { opacity: 0; top: 0; pointer-events: none; }
+.error-msg { color: #e11d48; font-size: 0.95em; margin-top: 2px; }

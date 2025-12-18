@@ -1,0 +1,251 @@
+/* =============================
+   Global Reset & Base
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  transition: all 0.4s ease-in-out !important;
+}
+
+/* =============================
+   Layout Containers
+============================= */
+.main-container {
+  display: flex;
+
+  min-height: 100vh;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 20px;
+
+  background: #fff;
+  border-radius: 12px;
+    margin-left: 220px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.sidebar.hidden~.dashboard {
+    margin-left: 60px;
+}
+
+/* =============================
+   Header Section
+============================= */
+.head-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.hamburger {
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: block; 
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb; /* blue accent */
+}
+
+.btn-section form {
+  margin: 0;
+}
+
+.btn-dark {
+  background: #111827;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-dark:hover {
+  background: #2563eb;
+}
+
+/* =============================
+   Category / User Manager
+============================= */
+.category-container {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.category-container h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #111827;
+}
+
+.category-container hr {
+  margin: 15px 0;
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* =============================
+   Table Header
+============================= */
+
+.category-item-head {
+        width: 100%;
+  background: #2563eb;
+  color: #0f0f0f;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.table-head{
+        background: #dadada !important;
+}
+.table-head input{
+        font-weight: bold;
+
+
+}
+
+.category-item th {
+  padding: 12px 14px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.category-item th:last-child {
+  border-right: none;
+}
+.search-section {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  .search-section h2 {
+width: 80%;
+    font-size: 1.4rem;
+    color: #111827;
+    margin: 0;
+  }
+  .search-section form {
+    width: 40%;
+  justify-content: spa  ce-between;
+    display: flex;
+    gap: 10px;
+}
+.search-section button {
+    width: 15%;
+    padding: 8px 16px;
+    background-color: #111827;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Search-bar {
+  width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+.Search-bar:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(42, 42, 43, 0.5);
+}
+.search-section button:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000 ;
+}
+
+/* =============================
+   User Rows (Form Style)
+============================= */
+.category-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 1.5fr 100px 60px;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.category-item:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+.category-item input {
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #374151;
+  pointer-events: none;
+}
+
+.category-item .btn.delete {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-item .btn.delete:hover {
+  background: #dc2626;
+}
+
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 768px) {
+  .head-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .category-item {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .category-item input {
+    margin-bottom: 6px;
+  }
+
+  .form-container {
+    overflow-x: auto;
+  }
+}
